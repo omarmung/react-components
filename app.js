@@ -21,14 +21,14 @@
 
     // <Items/>
 var Item = (props) => (
-  <li>{props.listItems}</li>;
+  <li>{props.anyOtherThing}</li>
 );
 
 
 var GroceryListItem = (props) => (
   <ul>
-    {this.props.listItems.map(function(item){
-      return <Item listItems={["kale", "shrimp", "peas"]}/>;
+    {props.listItems.map(function(item){
+      return <Item anyOtherThing={item}/>;
     })}
   </ul>
 );
@@ -36,7 +36,7 @@ var GroceryListItem = (props) => (
 var App = () => (
   <div>
     <h2>My Grocery List</h2>
-      <GroceryListItem />
+      <GroceryListItem listItems={["kale", "shrimp", "peas"]}/>
   </div>
 );
 
