@@ -14,17 +14,29 @@
     
 //   </li>
 // );
+// return 'text';
+  // return props.map(function(item){
+  //   return '<li>' + item + '</li>';
+  // }).join('');
+
+    // <Items/>
+var Item = (props) => (
+  <li>{props.listItems}</li>;
+);
+
 
 var GroceryListItem = (props) => (
   <ul>
-    <li>{props.items[0]}</li>
+    {this.props.listItems.map(function(item){
+      return <Item listItems={["kale", "shrimp", "peas"]}/>;
+    })}
   </ul>
 );
 
 var App = () => (
   <div>
     <h2>My Grocery List</h2>
-      <GroceryListItem items={["kale", "shrimp", "peas"]}/>
+      <GroceryListItem />
   </div>
 );
 
